@@ -6,31 +6,30 @@ namespace Aula60Ex84
     {
         static void Main(string[] args)
         {
-            double[] vet1 = new double[2]; 
-            double[] vet2 = new double[2]; 
-            double[] soma = new double[2]; 
+            int tamVet;
+            Console.WriteLine("Informe o tamando do vetor:");
+            tamVet = int.Parse(Console.ReadLine());
 
-            for (int i = 0; vet1.Length < 2; i++)
+            double[] vet1 = new double[tamVet]; 
+            double[] vet2 = new double[tamVet]; 
+            double[] soma = new double[tamVet];                       
+
+            for (int i = 0; i < tamVet; i++)
             {
-                Console.WriteLine("Informe os valores do vetor 1");
+                Console.WriteLine($"Informe o valor do vetor 1 pos {i}:");
                 vet1[i] = double.Parse(Console.ReadLine());
             }
-            for (int i = 0; vet1.Length < 2; i++)
+            for (int i = 0; i < tamVet; i++)
             {
-                Console.WriteLine("Informe os valores do vetor 2");
+                Console.WriteLine($"Informe o valor do vetor 2 pos {i}:");
                 vet2[i] = double.Parse(Console.ReadLine());
             }
-
-            for (int i = 0; vet1.Length < 2; i++)
+            Console.WriteLine("Soma dos vetores:");
+            for (int i = 0; i < tamVet; i++)
             {
                 soma[i] = vet1[i]+vet2[i];
                 Console.WriteLine(soma[i]);
             }
-
         }
-
-
-
-
     }
 }
